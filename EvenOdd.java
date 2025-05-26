@@ -10,3 +10,14 @@ public class EvenOdd {
     }
     
 }
+class EvenOdd1{
+    public static void main(String[] args) {
+        int a=3;
+
+        if(a%2==0){
+            System.out.println("Even number This is "+a);
+        } else {
+            System.out.println("Odd Number This is "+a);
+        }
+    }
+}
