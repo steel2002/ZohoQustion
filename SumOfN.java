@@ -33,10 +33,11 @@ public class SumOfN {
         int n = scan.nextInt();
 
         int sum = n * (n + 1) / 2;
-        System.out.println("Sum of first " + n + " natural numbers is: " + sum);
+        System.out.println(+ sum);
 
         for(int i=n-1;i>=1;i--){
-            System.out.println((sum-i));
+            System.out.println
+            ((sum-i));
             sum=sum-i;
         }
     }
