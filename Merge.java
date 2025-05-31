@@ -49,7 +49,7 @@ class Met6{
   
     }
 
-// 2d Array Right rotate 
+// 2d Array Right rotate                
 
 class Met7 {
     void Le(int[][] arr) {
@@ -87,3 +87,120 @@ class Met7 {
         obj.Le(rig);
     }
 }
+
+// 28 Oustions Alternate sorting
+
+class Met8{
+public static void main(String[] args) {
+        int[] arr = {2, 1, 3, 7, 5, 6, 4};
+        Arrays.sort(arr);  // Sort the array
+
+        int[] result = new int[arr.length];
+        int start = 0, end = arr.length - 1;
+
+        for (int i = 0; i < arr.length; i++) {
+            if (i % 2 == 0) {
+                result[i] = arr[start++];
+            } else {
+                result[i] = arr[end--];
+            }
+        }
+
+        // Print result
+        System.out.print("Output: ");
+        for (int num : result) {
+            System.out.print(num + " ");
+        }
+    }
+}
+
+// 29. Program to Find Factorial of a Number and the factorial number's reverse number.\
+
+ class FactorialReverse {
+    public static void main(String[] args) {
+        int n = 5;
+        int fact = 1;
+
+        
+        for (int i = 2; i <= n; i++) {
+            fact *= i;
+        }
+
+        int reverse = 0, temp = fact;
+        while (temp > 0) {
+            reverse = reverse * 10 + temp % 10;
+            temp /= 10;
+        }
+
+        System.out.println("Factorial of " + n + " is: " + fact);
+        System.out.println("Reverse of factorial: " + reverse);
+    }
+}
+
+
+// 30. Java Program to find the sum of elements of an array present on even position.
+class SumEvenPosition {
+    public static void main(String[] args) {
+        int [] arr={1,2,3,4,5,6,7,8,9};
+        int sum=0;
+        for(int i=0;i<arr.length;i++){
+            if(i%2==0){
+                sum +=arr[i];
+            }
+        }
+        System.out.println("Sum of elements at even positions: " + sum);
+    }
+}
+
+// 31. Java Program to find the sum of elements of an array present on odd position.
+
+class SumOddPosition {
+    public static void main(String[] args) {
+        int [] arr={1,2,3,4,5,6,7,8,9};
+        int sum=0;
+        for(int i=0;i<arr.length;i++){
+            if(i%2!=0){
+                sum +=arr[i];
+            }
+        }
+        System.out.println("Sum of elements at odd positions: " + sum);
+    }
+}
+
+
+// 32 Java Program to print the 2nd largest element in an array
+
+class SecondLargest{
+    public static void main(String[] args) {
+    int[] arr = {12, 35, 1, 10, 34, 1, 35, 12,40,5-0,60,70,80,90,100,200,300,400,500,600,700,800,900};
+    
+    Arrays.sort(arr);
+      for (int i = arr.length - 2; i >= 0; i--) {
+    if (arr[i] != arr[arr.length - 1]) {
+        System.out.println("Second largest element: " + arr[i]);
+        break;
+    }
+}
+    }
+}
+
+// 33. Java Program to print the 2nd smallest element in an array
+
+class SecondSmallest {
+    public static void main(String[] args) {
+        int[] arr = {12, 35, 1, 10, 34, 1, 35, 12,40,5-0,60,70,80,90,100,200,300,400,500,600,700,800,900};
+        
+        Arrays.sort(arr);
+        for (int i = 1; i < arr.length; i++) {
+            if (arr[i] != arr[0]) {
+                System.out.println("Second smallest element: " + arr[i]);
+                break;
+            }
+        }
+    }
+}
+
+
+
+
+

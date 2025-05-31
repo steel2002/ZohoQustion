@@ -44,6 +44,7 @@ public class Binary {
         while (num > 0) {
             result[index++] = hexChars[num % 16];
             num = num / 16;
+            
         }
 
         for (int i = index - 1; i >= 0; i--) {
