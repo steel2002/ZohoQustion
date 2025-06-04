@@ -9,8 +9,8 @@ public class SumOfN {
         }
         System.out.println("The sum of Number :"+sum);
 
-        int small=14
-        ;
+        int small=14;
+        
         int temp=sum;
 
         while (temp > 0) {
