@@ -172,12 +172,8 @@ class SecondLargest {
                 900 };
 
         Arrays.sort(arr);
-        for (int i = arr.length - 2; i >= 0; i--) {
-            if (arr[i] != arr[arr.length - 1]) {
-                System.out.println("Second largest element: " + arr[i]);
-                break;
-            }
-        }
+       System.out.println(arr[arr.length - 2]);
+       
     }
 }
 
@@ -190,12 +186,7 @@ class SecondSmallest {
                 900 };
 
         Arrays.sort(arr);
-        for (int i = 1; i < arr.length; i++) {
-            if (arr[i] != arr[0]) {
-                System.out.println("Second smallest element: " + arr[i]);
-                break;
-            }
-        }
+        System.out.println(arr[1]);
     }
 }
 
@@ -242,4 +233,5 @@ class frequency {
 
     }
 }
-// // 43. Maximum Average Subarray I
+
+
