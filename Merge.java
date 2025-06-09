@@ -252,5 +252,137 @@ class ReverseArray {
     }
 }
 
+// 38. Java Program to print the delete an elements of an array
+class DeleteElement{
+   
+      public static int[] remove(int[] arr, int in) {
+        if (arr == null || in < 0 || in >= arr.length) {
+            return arr;
+        }
+
+      	int[] arr2 = new int[arr.length - 1];
+
+        for (int i = 0, k = 0; i < arr.length; i++) {
+			if (i == in)
+                continue;
+			
+          	arr2[k++] = arr[i];
+        }
+
+        return arr2;
+    }
+  
+    public static void main(String[] args)
+    {
+        int[] arr = { 1, 2, 3, 4, 5 };
+
+      	int in = 2;
+
+    
+        arr = remove(arr, in);
+
+        System.out.println(Arrays.toString(arr));
+    }
+}
+
+// 38. Java Program to print the delete an elements of an array part 2
+
+class DeleteElemente{
+    public static void main(String[] args) {
+        int arr []= {10,20,30,40,50,60};
+
+        int index=2;
+
+        for(int i=0;i<arr.length;i++){
+            if(i==index){
+                continue;
+            } 
+            System.out.print(arr[i]+ "  ");
+        }
+    }
+}
+
+// 39. Java Program to print the average of all items of the array
+ class AverageArray {
+    public static void main(String[] args) {
+        int[] arr = { 10, 2, 3, 4, 5 };
+        double sum = 0;
+
+        for (int num : arr) {
+            sum += num;
+        }
+
+        double average = sum / arr.length;
+        System.out.println("Average of the array elements: " + average);
+    }
+}
+
+// 39. Java Program to print the average of all items of the array Part 2  without using for loop 
+
+class Element {
+    public static void main(String[] args) {
+        int arr[] = { 10, 2, 3, 4, 5};
+        double sum = 0;
+
+        int count=arr[0]+arr[1]+arr[2]+arr[3]+arr[4];
+        sum+= count;
+        double average = sum / arr.length;
+        System.out.println("Average of the array elements: " + average);
+    }
+}
+
+// 40. Java Program to inverse the elements of an array.
+class InverseArray {
+  
+    public static void main(String[] args) {
+        int[] arr = { 1, 2, 3, 4, 5 };
+        int[] inverse = new int[arr.length];
+        int j = 0;
+        for (int i = arr.length-1 ; i >=0; i--) {
+            inverse[j++] = arr[i];
+        }
+
+        System.out.println("Inverse of the array: " + Arrays.toString(inverse));
+    }
+}
+
+// 41  Write a programs to print following patterns pyramid pattern
+/*
+    1 
+   2 2
+  3 3 3
+ 4 4 4 4
+5 5 5 5 5
+ */
+class PyramidPattern 
+{
+    public static void main(String[] args) {
+        int n=5;
+        for(int i=1;i<=n;i++)
+        {
+            for(int j=1;j<=n;j++)
+            {
+                if(j<=(n-i))
+                {
+                    System.out.print(" ");
+                } else 
+                {
+                    System.out.print(i+" ");
+                }
+            }
+            System.out.println();
+        }
+    }
+}
+// 42  Write a programs to print following patterns pyramid pattern
+class Patteern {
+
+    
+}
+
+
+
+
+
 
 
