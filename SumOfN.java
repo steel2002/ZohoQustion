@@ -2,11 +2,8 @@ import java.util.Scanner;
 
 public class SumOfN {
     public static void main(String[] args) {
-        int num=15;
-        int sum=0;
-        for(int i=1;i<=num;i++){
-            sum+=i;
-        }
+        int n=10;
+        int sum = n * (n + 1) / 2;
         System.out.println("The sum of Number :"+sum);
 
         int small=14;
@@ -36,8 +33,7 @@ public class SumOfN {
         System.out.println(+ sum);
 
         for(int i=n-1;i>=1;i--){
-            System.out.println
-            ((sum-i));
+            System.out.println((sum-i));
             sum=sum-i;
         }
     }

@@ -20,7 +20,7 @@ public class Vowel{
 
 class Vowel1{
     public static void main(String[] args) {
-        char ch='g';
+        char ch='$';
 
         if((ch >= 'A' && ch <='Z' ) || (ch >='a' && ch <='z')){
             System.out.println("This is Alphabet :"+ch);

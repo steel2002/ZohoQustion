@@ -15,7 +15,7 @@ public class PastiveNeg {
 
 class Postive{
     public static void main(String[] args) {
-        int n =-8;
+        int n =8;
         String result =(n >0) ? "Postive" : (n<0) ? "Negative" :"Zero";
 
         System.out.println(n+ " is " +result+ " ");
