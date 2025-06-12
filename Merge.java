@@ -1,6 +1,8 @@
 import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.*;
+import java.util.HashSet;
+import java.util.Set;
 
 public class Merge {
     public static void main(String[] args) {
@@ -413,7 +415,155 @@ class Patteern {
     
 }
 
-// 43  Write a programs to print following patterns Diment pattern
+
+
+// 44  Write a programs to print following patterns Diment pattern
+
+/*
+   *
+   * *
+  * * *
+ * * * *
+* * * * *
+ * * * *
+  * * *
+   * *
+    *
+
+    A 
+   B B 
+  C C C 
+ D D D D 
+E E E E E 
+ D D D D 
+  C C C 
+   B B 
+    A 
+
+ */
+
+class DimentPattern {
+    public static void main(String[] args) {
+        int n=5;
+        int l=0;
+        char c ='A'-1;
+        for(int i=-n+1;i<n;i++)
+        {
+             if(i<0 || i==0)
+                {
+                    l=-i;
+                    c++;
+                } else {
+                    l=i;
+                    c--;
+                }
+            for(int j=1;j<=n;j++)
+            {
+                if(j<=l){
+                    System.out.print(" ");
+                } else {
+                System.out.print(c +" ");
+                }
+            }
+            System.out.println();
+        }
+    }
+}
+
+// 136. Single Number Hashset  LEET code 
+
+class SingleNumber {
+    public static void main(String[] args) {
+        int[] arr = { 4, 1, 2, 1, 2 ,3};
+        Set<Integer> set = new HashSet<>();
+
+        for (int num : arr) {
+            if (!set.add(num)) {
+                set.remove(num);
+            }
+        }
+
+        System.out.println("The single number is: " + set.iterator().next());
+    }
+}
+
+// 217. Contains Duplicate HashSet LEET code true or false  one value in array same time is true 
+
+class ContainsDuplicate {
+    public static void main(String[] args) {
+        int[] arr = { 1, 2, 3 };
+        Set<Integer> set = new HashSet<>();
+
+        for (int num : arr) {
+            if (!set.add(num)) {
+                System.out.println("Contains duplicate: true");
+                return;
+            }
+        }
+
+        System.out.println("Contains duplicate: false");
+    }
+}
+// 46. Write a program to find the odd numbers in between the range.
+ /* Input:
+15
+Output:
+3,5,7,9,11,13
+*/
+class oddNumber {
+    public static void main(String[] args) {
+        int n=15;
+        for(int i=2;i<n;i++)
+        {
+            if(i%2!=0)
+            {
+                System.out.println(i + " ");
+            }
+
+        }
+        
+    }
+}
+// 47. Write a program to print a letters from 'A' to the user input character without using strings.
+ /* Example 1: input: D
+Output : ABCD
+*/
+
+ class printLetters {
+    public static void main(String[] args) {
+        char input = 'D';
+        
+        for(char i = 'A'; i <= input ;i++)
+        {
+            System.out.println(i + " ");
+        }
+    }
+ }
+ // 48. write a program to find the sum of given number and it's reverse number.
+ /* Example 1: Input: 12345
+Output: 12345+54321 = 66666
+*/ 
+
+class SumandReverse {
+    public static void main(String[] args) {
+        int num = 12345;
+        int reverse = 0;
+        int original = num;
+
+        while (num > 0) {
+            reverse = reverse * 10 + num % 10;
+            num /= 10;
+        }
+        int sum = original + reverse;
+
+        System.out.println("Sum " + original + " reverse " + reverse + " is: " + sum);
+    }
+}
+// 49. Using Recursion reverse the string such as
+ /* Eg 1: Input: one two three
+Output: three two one
+
+*/
 
 
 
