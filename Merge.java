@@ -470,40 +470,6 @@ class DimentPattern {
     }
 }
 
-// 136. Single Number Hashset  LEET code 
-
-class SingleNumber {
-    public static void main(String[] args) {
-        int[] arr = { 4, 1, 2, 1, 2 ,3};
-        Set<Integer> set = new HashSet<>();
-
-        for (int num : arr) {
-            if (!set.add(num)) {
-                set.remove(num);
-            }
-        }
-
-        System.out.println("The single number is: " + set.iterator().next());
-    }
-}
-
-// 217. Contains Duplicate HashSet LEET code true or false  one value in array same time is true 
-
-class ContainsDuplicate {
-    public static void main(String[] args) {
-        int[] arr = { 1, 2, 3 };
-        Set<Integer> set = new HashSet<>();
-
-        for (int num : arr) {
-            if (!set.add(num)) {
-                System.out.println("Contains duplicate: true");
-                return;
-            }
-        }
-
-        System.out.println("Contains duplicate: false");
-    }
-}
 // 46. Write a program to find the odd numbers in between the range.
  /* Input:
 15
