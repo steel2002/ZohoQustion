@@ -70,3 +70,23 @@ class FindDuplicatenumber {
 
 }
 
+// 746. Min Cost Climbing Stairs Top down Method
+
+class MinCostClimbingStairs {
+    public static void main(String[] args) {
+        int [] cost = {10,15,20};
+        int n= cost.length;
+
+        int dp []= new int [n+1];
+
+        dp[0]=0;
+        dp[1]=0;
+
+        for(int i=2;i<=n;i++){
+            dp[i]=Math.min(cost[i-1] + dp[i-1], cost[i-2] + dp[i-2]);
+
+        }
+        System.out.println("The minimum cost to climb the stairs is: " + dp[n]);
+    }
+}
+
