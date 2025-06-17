@@ -65,7 +65,7 @@ class FindDuplicatenumber {
             }
         }
 
-        System.out.println("The duplicate number is: " + left);
+        System.out.println("duplicate number is: " + left);
     }
 
 }
