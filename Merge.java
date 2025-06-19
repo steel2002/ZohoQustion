@@ -470,6 +470,48 @@ class DimentPattern {
     }
 }
 
+
+// 45. Write a program to print the following output for the given input. You can
+
+/*
+ 1         1
+ 2       2
+  3     3
+   4   4
+    5 5
+     6 
+ */
+
+class printpattern{
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+        String tex = scan.nextLine();
+        int n= tex.length();
+        int k=0;
+
+        for(int i=1;i<=n;i++)
+        {
+            for(int j=1;j<=n;j++)
+            {
+                if(j<=(i-1))
+                {
+                    System.out.print(" ");
+                } else {
+                    if (j==i || j==n) {
+                        System.out.print(tex.charAt(k) + " ");
+                        
+                    }else {
+                        System.out.print("  ");
+                    }
+                    
+                }
+            }
+            k++;
+            System.out.println();
+        }
+    }
+}
+
 // 46. Write a program to find the odd numbers in between the range.
  /* Input:
 15
@@ -501,7 +543,7 @@ Output : ABCD
         
         for(char i = 'A'; i <= input ;i++)
         {
-            System.out.println(i + " ");
+            System.out.print(i + " ");
         }
     }
  }
@@ -530,6 +572,278 @@ class SumandReverse {
 Output: three two one
 
 */
+class ReverseLitter {
+    public static void main(String[] args) {
+        String input =" one tow three";
+
+        String [] words = input .split(" ");
+
+        recurs(words, words.length - 1);
+
+
+
+    }
+
+static void recurs(String[] words, int i) {
+        if (i < 0) {
+            return;
+        }
+        System.out.print(words[i] + " ");
+        recurs(words, i - 1);
+    }
+
+}
+
+// 50. Write a program to output the number in words (0-999)
+/*
+Input: 234
+Output: Two hundred and Thirty Four
+ */
+
+ class Prog50
+{
+    public static void main(String[]args)
+    {
+        String[]ones = {"","one","two","three","four","five","six","seven","eight","nine","ten",
+                       "eleven","twelve","thirteen","fourteen","fifteen","sixteen","seventeen","eighteen","ninteen"};
+        String[]tens = {"","","twenty","thirty","fourty","fifty","sixty","seventy","eighty","ninety"};
+        Scanner java = new Scanner(System.in);
+        System.out.println("Enter the value between 0 and 999");
+        int n = java.nextInt();
+        while(n>0)
+        {
+            if(n>=100)
+            {
+                System.out.print(ones[n/100] + " hundred and ");
+                n = n%100;
+            }
+            else if(n>=10)
+            {
+                System.out.print(tens[n/10] + " ");
+                n = n%10;
+            }
+            else
+            {
+                System.out.print(ones[n]);
+                n = n/10;
+            }
+        }
+    }
+}
+ // 51. Write a program to sort the elements in odd positions in descending order and elements in ascending order.
+/*
+ Eg 1: Input: 13,24,15,12,10,5
+Output: 13.2.12.10.5.15.4
+ */
+
+ class SortOddEven {
+    public static void main(String[] args) {
+        int arr[]={13, 24, 15, 12, 10, 5};
+        int n = arr.length;
+        ArrayList<Integer> odd = new ArrayList<>();
+        ArrayList<Integer> even = new ArrayList<>();
+
+        for(int i=0;i<n;i++){
+            if(i%2==0){
+                odd.add(arr[i]);
+            }else {
+                even.add(arr[i]);
+            }
+        }
+        Collections.sort(odd, Collections.reverseOrder());
+        Collections.sort(even);
+        int j=0,k=0;
+        for(int i=0;i<n;i++){
+            if(i%2==0){
+                System.out.print(odd.get(j++) + " ");
+            }else {
+                System.out.print(even.get(k++) + " ");
+            }
+        }
+
+
+    }
+}
+
+// 52. Write a program to print the alphabet 'C' with the stars based on the given numbers
+
+/*
+**** 
+*
+*
+*
+****
+ */
+
+class PrintC{
+    public static void main(String[] args) {
+        int n = 10; 
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < n; j++) {
+                if (j == 0 || (i == 0 && j < n - 1) || (i == n - 1 && j < n - 1)) {
+                    System.out.print("*");
+                } else {
+                    System.out.print(" ");
+                }
+            }
+            System.out.println();
+        }
+    }
+}
+
+// 53. Write a program to make such a pattern like a pyramid with numbers increased by 1.
+/*
+Eg:
+Input: 10
+Output:
+   1
+  2 3
+ 4 5 6
+7 8 9 10
+
+ */
+
+ 
+class PyramidNumbers {
+public static void main(String[] args){
+  int n=4;
+  int count=1;
+  
+        for(int i=1;i<=n;i++)
+        {
+            for(int j=1;j<=n;j++)
+            {
+                if(j<=(n-i))
+                {
+                    System.out.print(" ");
+                } else 
+                {
+                    System.out.print(count++ + " ");
+                }
+            }
+            System.out.println();
+        }
+    }
+}
+// 54. Write a program to print the following output for the given input. You can assume the string is of odd length
+
+/*
+1    5
+ 2  4
+  3
+ 2  4
+1    5
+ */
+class PrintPattern2 {
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+        int n=scan.nextInt();
+
+        for(int i= 1;i<=n;i++){
+            for(int j=1;j<=n;j++){
+                if(i==j || i+j==n+1){
+                    System.out.print(j + " ");
+                }else {
+                    System.out.print(" ");
+                }
+            }
+            System.out.println();
+
+        }
+    }
+
+}
+// 55. Write a program to print the following pattern for the given input number.
+
+/*
+    3 3 3 3 
+    3 2 2 2 
+    3 2 1 2 
+    3 2 2 2  
+ */
+
+class PrintPattern3 {
+    public static void main(String[] args) {
+        int n=4;
+        int mid=n/2;
+
+        for(int i=0;i<n;i++){
+            for(int j=0;j<n;j++){
+                int value=Math.max(Math.abs(i-mid), Math.abs(j-mid))+1;
+                System.out.print(value + " ");
+            }
+            System.out.println();
+        }
+    }
+}
+// 56. Print all the substring of the given string without using strings.
+/*
+ a
+ab
+abc
+b
+bc
+c 
+ */
+
+class PrintSubString {
+    public static void main(String[] args) {
+        String input = "abc";
+        int n = input.length();
+
+        for (int i = 0; i < n; i++) {
+            for (int j = i + 1; j <= n; j++) {
+                System.out.println(input.substring(i, j));
+            }
+        }
+    }
+}
+
+// 57. Print the numbers which are mismatched from two array.
+/*
+ Example:
+Input:
+Arrl = {abc defgh i)
+Arr2 = {abde egg i i)
+Output:
+cd, de, f, g, h, i
+
+ */
+
+ class mismatched {
+    public static void main(String[] args) {
+        char ch1[] = { 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i'};
+        char ch2[] = { 'a', 'b', 'd', 'e', 'e', 'g', 'i', 'i','g'};
+        for(int i=0;i<ch1.length;i++){
+            if(ch1[i]!=ch2[i]){
+                System.out.print(ch1[i]+" "+ch2[i] + " ");
+            }
+        }
+    }
+ }
+
+ // 58. Given 2 huge numbers as separate digits, store them in array and process them and calculate the sum of 2 numbers and store the result in an array and print the sum.
+/*
+ * Input:
+Number of digits: 12
+928135673116
+Number of digits: 9
+784621997
+Output:
+928920295113
+ */
+
+
+ 
+
+
+
+
+
+
+
+
+
 
 
 

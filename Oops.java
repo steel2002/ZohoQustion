@@ -81,3 +81,25 @@ class Oops1 {
 
 }
 
+// Constructors in java  class name Function name same to Constructor ;
+
+class Rectangle2{
+    int length, width;
+
+    Rectangle2(){
+        System.out.println("Default Constructor Called");
+        length = 10;
+        width = 20;
+    }
+    int area(){
+        return length * width;
+    }
+}
+
+class Constructors {
+    public static void main(String[] args) {
+        Rectangle2 r1 = new Rectangle2();
+        System.out.println("Area of Rectangle: " + r1.area());
+        
+    }
+}
