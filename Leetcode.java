@@ -109,6 +109,7 @@ class MinCostClimbingStairs {
         return maxSum;
         
     }
+    
 
     public static void main(String[] args) {
         int[] nums1 = {10, 20, 30, 5, 10, 50};
@@ -118,6 +119,21 @@ class MinCostClimbingStairs {
     }
 }
 
+
+class Rain {
+    public static void main(String[] args) {
+        int arr []= {2,3,1,3,2};
+        int left=0,right=arr.length-1,leftmax=arr[left],rightmax=arr[right],water=0;
+
+        while(left < right){
+            if(leftmax < rightmax){
+                leftmax=Math.max(leftmax,arr[left]);
+            }
+        }
+
+    }
+
+}
 
 
 
