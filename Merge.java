@@ -833,6 +833,82 @@ Output:
 928920295113
  */
 
+ class Prog {
+    public static void main(String[] args) {
+        
+        int a [] = {9,2,8,1,3,5,6,7,3,1,1,6};
+
+        int b [] = {7,8,4,6,2,1,9,9,7};
+
+        int al= a.length-1;
+        int bl=b.length-1;
+
+        int c []= new int[(Math.max(al,bl)+ 1)];
+
+        int cl= c.length-1;
+
+        int temp=0;
+
+        while(al>=0 || bl>=0|| temp!=0)
+        {
+             int num1=(al >0)? a[al]:0;
+
+             int num2=(bl >0)? b[bl] :0;
+             c[cl]=(num1 + num2 + temp)%10;
+             temp=(num1+num2+temp)/10;
+             al--;
+             bl--;
+             cl--;
+
+        }
+        int start=0;
+
+        if(c[start]==0)
+        {
+            start=1;
+        }
+        for(int i=start;i<c.length;i++)
+        {
+            System.out.print(c[i]+"");
+        }
+
+
+    }
+ }
+
+ // 59 
+ /*
+  * 
+  /*Program to print the below format
++===+===+
+| | |
+| | |
+| | |
++===+===+
+| | |
+| | |
+| | |
++===+===+*/
+  
+class Prog1{
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+         System.err.println("Enter the Number :");
+        int n =scan.nextInt();
+       
+
+        for (int i=0;i<=n;i++) {
+
+            if(i%4==0)
+            {
+                System.err.println("+===+===+");
+            } else {
+                System.err.println("| | |");
+            }
+            
+        }
+    }
+}
 
 
  
