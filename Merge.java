@@ -903,7 +903,7 @@ class Prog1{
             {
                 System.err.println("+===+===+");
             } else {
-                System.err.println("| | |");
+                System.out.println("| | |");
             }
             
         }
