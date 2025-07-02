@@ -16,7 +16,7 @@ public class Vowel{
 
 }
 
-// Alphabet check 
+// Alphabet check selvin
 
 class Vowel1{
     public static void main(String[] args) {
