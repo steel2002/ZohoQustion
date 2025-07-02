@@ -182,3 +182,7 @@ class Rain {
         new Image().rotate(arr);
     }
 }
+
+// Diangnal 
+
+
