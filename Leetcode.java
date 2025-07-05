@@ -183,6 +183,78 @@ class Rain {
     }
 }
 
-// Diangnal 
+// Pattan
 
+/*
+ * 
+1
+12
+123
+1234
+12345
+ */
 
+class Pattan {
+    public static void main(String[] args) {
+        int n =5;
+
+        for(int i=1;i<=n;i++)
+        {
+            for(int j=1;j<=i;j++)
+            {
+                System.out.print(j);
+            }
+            System.out.println();
+        }
+    }
+}
+
+// Pattan 2
+
+/*
+1
+21
+321
+4321
+54321
+ */
+
+class Pat1{
+     public static void main(String[] args) {
+        int n=5;
+
+        for(int i=1;i<=n;i++)
+        {
+            for(int j=i;j>=1;j--)
+            {
+                System.out.print(j);
+            }
+            System.out.println();
+        }
+    }
+}
+
+// Pattan 3
+
+/*
+12345
+1234
+123
+12
+1
+ */
+
+class Pat2 {
+    public static void main(String[] args) {
+        int n=5;
+
+        for(int i=5;i>=1;i--)
+        {
+            for(int j=1;j<=i;j++)
+            {
+                System.err.print(j);
+            }
+            System.out.println();
+        }
+    }
+}
