@@ -1,3 +1,4 @@
+import java.util.Arrays;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -256,5 +257,37 @@ class Pat2 {
             }
             System.out.println();
         }
+    }
+}
+
+// 88 Merge Sorted Array
+
+class Pat3 {
+
+    static void printArray(int arr1[], int arr2[], int m, int n) {
+        for (int j = 0, i = m; j < n; j++) {
+            arr1[i] = arr2[j];
+            i++;
+        }
+
+        System.out.println("Array after merging: " + Arrays.toString(arr1));
+        Arrays.sort(arr1);
+        System.out.println("Sorted Array: " + Arrays.toString(arr1));
+    }
+
+    public static void main(String[] args) {
+
+        int arr1[] = new int[10]; 
+        arr1[0] = 1;
+        arr1[1] = 2;
+        arr1[2] = 3;
+        arr1[3] = 4;
+        arr1[4] = 5;
+
+        int arr2[] = {6, 7, 8, 9, 10};
+        int m = 5;
+        int n = arr2.length;
+
+        printArray(arr1, arr2, m, n);
     }
 }

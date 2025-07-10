@@ -18,3 +18,47 @@ public class ArraySwap {
         System.out.println();
     }
 }
+
+class Array1 {
+    public static void main(String[] args) {
+        int arr [] = {1,2,3,4,5};
+
+        int max=0;
+        int min=0;
+
+        for(int i=0;i<arr.length;i++)
+        {
+            if(arr[i] > max)
+            {
+                max = arr[i];
+            }
+            if(arr[i] < min )
+            {
+                min = arr[i];
+            }
+        }
+        System.out.println("Max: " + max);
+        System.out.println("Min: " + min);
+    }
+}
+
+// Count the Frequency of Each Element
+
+class Array2 {
+    public static void main(String[] args) {
+        int arr[]= {1, 2, 2, 3, 3, 3, 4, 4, 4, 4};
+
+        int count [] = new int [arr.length];
+
+        boolean visited[] = new boolean[arr.length];
+
+        for(int i=0;i<arr.length;i++)
+        {
+            if(visited[i]) {
+              continue;
+
+            }
+           
+        }
+    }
+}
