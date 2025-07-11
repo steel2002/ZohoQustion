@@ -1,5 +1,6 @@
 import java.util.Arrays;
 import java.util.HashSet;
+import java.util.Scanner;
 import java.util.Set;
 
 public class Leetcode {
@@ -291,3 +292,49 @@ class Pat3 {
         printArray(arr1, arr2, m, n);
     }
 }
+
+// 866. Prime Palindrome
+
+class Prime 
+{
+    public static void main(String[] args) {
+
+        Scanner scan = new Scanner(System.in);
+        System.out.println("The entered number is: ");
+       int n= scan.nextInt();
+       boolean  b= true;
+        boolean c= true;
+
+        while(c)
+        {
+            for(int i=2;i<=Math.sqrt(n);i++)
+            {
+                if(n%i==0)
+                {
+                    b= false;
+                    break;
+                }
+            }
+            if(b)
+            {
+                int rev=0;
+                int org=n;
+                while (org>0) {
+                   rev= rev*10+org%10;
+                   org=org/10;
+                }
+                   if(n==rev)
+                   {
+                    System.out.println("Prime Palindrome is: " +rev);
+                    c=false;
+                    break;
+                   }                    
+                }
+            n++;
+            b = true;
+
+        }
+        }
+        }
+    
+

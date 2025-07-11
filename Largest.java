@@ -21,6 +21,8 @@ public class Largest{
     System.out.println("The Largest Number is "+big);
     }
 }
+
+ 
 class LargestMax {
     public static void main(String[] args) {
         int a=10;
@@ -32,6 +34,8 @@ class LargestMax {
         System.out.println("The Max Value "+LargestMax);
     }
 }
+
+
 class Largest1 {
     public static void main(String[] args) {
         int a=10;

@@ -1,4 +1,5 @@
 import java.util.Arrays;
+import java.util.*;
 
 public class Array {
     public static void main(String[] args) {
@@ -91,5 +92,25 @@ class Array6 {
             }
           }
         }
+    }
+}
+// demo 
+
+class Array1 {
+    public static void main (String [] args)
+    {
+        Scanner sc = new Scanner(System.in);
+
+        String [] arr= new String[5];
+
+        for(int i=0;i<arr.length;i++)
+        {
+            
+            arr[i] = sc.nextLine();
+        }
+        System.out.println(Arrays.toString(arr));
+
+        arr[2]= "david";
+        System.out.println(Arrays.toString(arr));
     }
 }

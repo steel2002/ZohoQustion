@@ -1,23 +1,31 @@
+import java.util.Arrays;
+import java.util.*;
+
 public class ArraySwap {
 
     public static void main(String[] args) {
 
         int res[] = {10, 20, 30, 40, 50};  
-        int i = 1;
-        int j = 4;
+         
 
-        int temp = res[i];
-        res[i] = res[j];
-        res[j] = temp;
-
+        for(int i = 0, j = res.length - 1; i < j; i++, j--) {
+           
+            int temp = res[i];
+            res[i] = res[j];
+            res[j] = temp;
+        }
+         // one loop to swap elements
+        System.out.println(Arrays.toString(res));
        
         System.out.println("After Swap:");
         for (int num : res) {
             System.out.print(num + " ");
         }
-        System.out.println();
+        
     }
 }
+
+// min and max in an array
 
 class Array1 {
     public static void main(String[] args) {
@@ -58,7 +66,7 @@ class Array2 {
               continue;
 
             }
-           
+           System.out.println("Element: " + arr[i] + ", Count: " + count[i]);
         }
     }
 }
