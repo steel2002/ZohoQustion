@@ -329,12 +329,42 @@ class Prime
                     c=false;
                     break;
                    }                    
+
                 }
             n++;
             b = true;
 
         }
         }
+        }
+
+        // 821. Shortest Distance to a Character using two pointers
+
+        class Distance {
+            public static void main(String[] args) {
+                String s = "LoveLeetcode";
+                char c='e';
+
+                int n= s.length();
+
+                int[] ans = new int[n];
+
+                int p= Integer.MAX_VALUE;
+                for(int i=0;i<n;i++)
+                {
+                    if(s.charAt(i)==c)
+                    {
+                        p=0;
+                    }
+                    else if(p!=Integer.MAX_VALUE)
+                    {
+                        p++;
+                    }
+                    ans[i]=p;
+                }
+                System.out.println( Arrays.toString(ans));
+            }
+
         }
     
 
